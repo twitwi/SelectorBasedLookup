@@ -20,7 +20,11 @@ public class SelectorBasedLookup extends ProxyLookup {
     private Lookup.Result<Selector> selectorsLookupResult;
     private final LookupListener selectorsInLayerListener;
 
-    public SelectorBasedLookup(final Lookup baseLookup, String layerPathForSelectors) {
+    public static SelectorBasedLookup createLookup(Lookup baseLookup, String layerPathForSelectors) {
+        return new SelectorBasedLookup(baseLookup, layerPathForSelectors);
+    }
+
+    protected SelectorBasedLookup(final Lookup baseLookup, String layerPathForSelectors) {
         selectorsLookupResult = Lookups.forPath(layerPathForSelectors).lookupResult(Selector.class);
         selectorsInLayerListener = new LookupListener() {
             @Override
