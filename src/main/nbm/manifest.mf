@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Localizing-Bundle: fr/prima/netbeans/selectorbasedlookup/Bundle.properties
+OpenIDE-Module-Layer: fr/prima/netbeans/selectorbasedlookup/layer.xml
